@@ -1,0 +1,68 @@
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
+.logo {
+	height: 80px;
+}
+
+#header {
+	position: absolute;
+}
+
+#home-bg {
+	height: 800px;
+	background-image: url('images/bg1.jpg');
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.navbar-nav {
+	margin-left: 50px;
+}
+
+.navbar-nav li a {
+	font-family: Quicksand;
+	margin-right: 15px;
+}
+
+#home-bg h1 {
+	font-family: Catamaran;
+	color: rgba(245,245,245,0.9);
+	font-size: 80px;
+}
+
+#home-bg h4 {
+	font-family: Quicksand;
+	color: rgba(245,245,245,0.9);
+}
+
+#home-bg button {
+	margin-top: 50px;
+	padding: 20px;
+	border: transparent;
+	border-top-right-radius: 40px;
+	border-bottom-left-radius: 40px;
+	width: 250px;
+	background-color: rgba(245,245,245,0.9);
+	font-family: Quicksand;
+	font-weight: bold;
+}
+
+.footer {
+	padding: 50px;
+	font-family: Quicksand;
+	text-align: center;
+}
+
+#cb {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
