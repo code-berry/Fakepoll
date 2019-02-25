@@ -34,7 +34,7 @@ body, html {
 
 #home-bg h1 {
 	font-family: Catamaran;
-	color: rgba(245,245,245,0.9);
+	color: rgba(245,245,245,0.96);
 	font-size: 80px;
 }
 
@@ -53,16 +53,199 @@ body, html {
 	background-color: rgba(245,245,245,0.9);
 	font-family: Quicksand;
 	font-weight: bold;
+	transition: background-color 500ms;
+}
+
+#home-bg button:hover {
+	background-color: #fafafa;
+	cursor: pointer;
 }
 
 .footer {
 	padding: 50px;
 	font-family: Quicksand;
 	text-align: center;
+	position: relative;
 }
 
 #cb {
 	position: absolute;
 	bottom: 10px;
 	right: 10px;
+	height: 60px;
+	width: 60px;
+}
+
+#main-bg {
+	height: 650px;
+	background-color: #1a1616;
+}
+
+.slider {
+  	-webkit-appearance: none;
+	width: 75%;
+	height: 25px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.8;
+	transition: opacity 200ms;
+}
+
+.slider:hover {
+	opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+#main-inner {
+	height: 100%;
+	padding-top: 100px;
+}
+
+#input-panel {
+	height: 100%;
+	padding-top: 150px;
+	display: none;
+}
+
+#input-panel h1 {
+	margin-bottom: 20px;
+	font-family: Catamaran;
+	color: #fafafa;
+}
+
+#main-inner h2 {
+	font-family: Catamaran;
+	color: #fafafa;
+	margin-top: 50px;
+}
+
+input {
+	transition: background-color 500ms;
+}
+
+input:focus {
+	background-color: #fafafa !important;
+}
+
+#main-inner button {
+	margin-top: 50px;
+	padding: 10px 50px;
+	border: transparent;
+	float: right;
+	font-family: Quicksand;
+	font-weight: bold;
+}
+
+#input-panel button {
+	margin-top: 50px;
+	padding: 10px 50px;
+	border: transparent;
+	float: right;
+	font-family: Quicksand;
+	font-weight: bold;
+}
+
+.count {
+	color: #d3d3d3;
+	font-family: Quicksand;
+}
+
+.row input {
+	width: 20%;
+	margin: auto;
+	padding: 10px;
+	font-family: Quicksand;
+	background-color: rgba(211, 211, 211, 0.9);
+	border: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.input-number {
+  width: 80px;
+  padding: 0 12px;
+  vertical-align: top;
+  text-align: center;
+  outline: none;
+  background-color: rgba(211,211,211,0.9);
+}
+
+.input-number,
+.input-number-decrement,
+.input-number-increment {
+  border: 1px solid #ccc;
+  height: 40px;
+  user-select: none;
+}
+
+.input-number-decrement,
+.input-number-increment {
+  display: inline-block;
+  width: 30px;
+  line-height: 38px;
+  background: #f1f1f1;
+  color: #444;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+.input-number-decrement:active,
+.input-number-increment:active {
+  background: #ddd;
+}
+
+.input-number-decrement {
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.input-number-increment {
+  border-left: none;
+  border-radius: 0 4px 4px 0;
 }
