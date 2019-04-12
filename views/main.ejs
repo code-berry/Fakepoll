@@ -1,0 +1,35 @@
+<%- include('partials/header.ejs') %>
+
+
+<div class="container-fluid" id="main-bg">
+  <div class="container" id="main-inner">
+    <h2>How many "responses" would you like?</h2>
+    <input type="range" min="20" max="2500" value="1000" class="slider" id="myRange">
+    <div class="count">1000 totally real responses.</div>
+    <h2>How many questions are in your survey?</h2>
+    <div><span class="input-number-decrement">–</span><input class="input-number" type="text" value="7" min="2" max="18"><span class="input-number-increment">+</span></div>
+    <button id="startapp">Go</button>
+  </div>
+
+  <div class="container" id="input-panel">
+    <h1>Question <span id="curr_num">1</span></h1>
+    <div class="row">
+      <input type="text" placeholder="Poll Option One">
+      <input type="text" placeholder="Poll Option Two">
+      <input type="text" placeholder="Poll Option Three">
+      <input type="text" placeholder="Poll Option Four">
+    </div>
+    <div class="row">
+      <input type="text" placeholder="Desired Weight (%)">
+      <input type="text" placeholder="Desired Weight (%)">
+      <input type="text" placeholder="Desired Weight (%)">
+      <input type="text" placeholder="Desired Weight (%)">
+    </div>
+    <button id="nextButton">Next</button>
+  </div>
+</div>
+
+
+<script src="main.js"></script>
+
+<%- include('partials/footer.ejs') %>
