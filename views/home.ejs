@@ -1,7 +1,18 @@
 <%- include('partials/header') %>
 
 
+<div class="container-fluid" id="home-bg">
+	<div class="container">
+		<h1>Welcome to Fakepoll.</h1>
+		<h4>A website designed to generate poll responses based on pre-determined criteria. In other words, it will make responses appear out of thin air, which you can then use for school projects.</h4>
+	</div>
+	<a href="/main"><button>Get Started</button></a>
+</div>
 
-
+<script>
+	$(document).ready(()=> {
+		$('nav').addClass('solidBrah');
+	});
+</script>
 
 <%- include('partials/footer') %>

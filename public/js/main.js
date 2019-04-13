@@ -1,24 +1,28 @@
+// Initialize your variables, sir!
 var slider = $('#myRange');
 var output = $('.count');
 var val = slider.value;
 var user_res, user_ques;
 
+// onload function, had trouble with storing objects
+// so I made sure it was being run on the pageload
 window.onload = function() {
 	output.text(val);
-
 	slider.on('input', function () {
 		val = this.value;
 		$('.count').text(val + ' totally real responses.');
 	});
 };
 
+// integer number ui
 (function() {
 	window.inputNumber = function(el) {
+	// initialize variables, find min and max from html
     var min = el.attr('min') || false;
     var max = el.attr('max') || false;
-
     var els = {};
-
+    
+    // using prev() and next()
     els.dec = el.prev();
     els.inc = el.next();
 
@@ -50,27 +54,26 @@ window.onload = function() {
   }
 })();
 
+// run inputNumber()
 inputNumber($('.input-number'));
 
-
+// listener for the "go" button
 $('#startapp').on('click', function() {
+	// show proper content
 	setTimeout(function() {
 		$('#main-inner').fadeOut();
 	}, 300);
 	setTimeout(function() {
 		$('#input-panel').fadeIn();
 	}, 550);
-	initInput();
-});
-
-function initInput() {
+	// get initial input from user
 	user_res = $('#myRange')[0].value;
 	user_ques = $('.input-number')[0].value;
-	var current = 0;
-	var $panel = $('#input-panel');
-	while (current < user_ques) {
-		// var new_panel = $panel.clone();
-		// $('#main-bg').append(new_panel);
-		current++;
-	}
-}
+});
+
+$('body').css('background-color', 'black');
+
+// function initInput() {
+// 	user_res = $('#myRange')[0].value;
+// 	user_ques = $('.input-number')[0].value;
+// }

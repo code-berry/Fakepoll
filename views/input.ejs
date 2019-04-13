@@ -1,0 +1,52 @@
+<%- include('partials/header') %>
+
+<% ques = parseInt(ques) %>
+<p id="hidden"><%= rez %></p>
+
+<div id="example" class="container-fluid">
+	<div id="ex_inner">
+		<h1>Example Input</h1>
+		<input type="text" class="form-control" placeholder="How many hours a day do you spend on your cell phone?" disabled="true">
+		<hr>
+		<h6>Desired answers</h6>
+		<input type="text" class="top-q answer-input form-control" placeholder="1-2hrs" disabled="true">
+		<input type="text" class="top-q answer-input form-control" placeholder="2-3hrs" disabled="true">
+		<input type="text" class="answer-input form-control" placeholder="4-6hrs" disabled="true">
+		<input type="text" class="answer-input form-control" placeholder="6+ hrs" disabled="true">
+		<hr>
+		<h6>*in terms of decimal percent (80% is 0.8, 5% is 0.05 etc...)</h6>
+		<input type="text" class="top-q weight-input form-control" placeholder="0.33" disabled="true">
+		<input type="text" class="top-q weight-input form-control" placeholder="0.35" disabled="true">
+		<input type="text" class="weight-input form-control" placeholder="0.17" disabled="true">
+		<input type="text" class="weight-input form-control" placeholder="0.15" disabled="true">
+	</div>
+</div>
+
+<form action="/input" method="POST">
+	<div class="container" id="input-d1">
+		<% for (let i=1; i<ques+1; i++) { %>
+			<div id="res_<%= i %>" class="response-holder">
+				<div>
+					<h1>Question <%= i %></h1>
+					<input type="hidden" value="<%= rez %>" name="god">
+					<input class="question-input form-control" type='text' placeholder="Enter question" name="Q<%= i %>" required>
+					<hr>
+					<input type="text" class="answer-input form-control" placeholder="A" name="qA<%= i %>" required>
+					<input type="text" class="answer-input form-control" placeholder="B" name="qB<%= i %>" required>
+					<input type="text" class="answer-input form-control" placeholder="C" name="qC<%= i %>" required>
+					<input type="text" class="answer-input form-control" placeholder="D" name="qD<%= i %>" required>
+					<hr>
+					<input type="number" class="weight-input form-control" placeholder="Desired Weight" step="0.001" max="1.0" name="weightA<%= i %>" required>
+					<input type="number" class="weight-input form-control" placeholder="Desired Weight" step="0.001" max="1.0" name="weightB<%= i %>" required>
+					<input type="number" class="weight-input form-control" placeholder="Desired Weight" step="0.001" max="1.0" name="weightC<%= i %>" required>
+					<input type="number" class="weight-input form-control" placeholder="Desired Weight" step="0.001" max="1.0" name="weightD<%= i %>" required>
+				</div>
+			</div>
+		<% } %>
+		<button type="submit" class="btn btn-primary">Submit Info</button>
+	</div>
+</form>
+
+<script src="js/input.js"></script>
+
+<%- include('partials/footer') %>

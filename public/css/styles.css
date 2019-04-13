@@ -13,9 +13,9 @@ body, html {
 
 #home-bg {
 	height: 800px;
-	background-image: url('images/bg1.jpg');
-	background-size: cover;
-	background-position: center;
+	background-image: url('../images/bg3.png');
+	/*background-size: cover;
+	background-position: center;*/
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -34,13 +34,16 @@ body, html {
 
 #home-bg h1 {
 	font-family: Catamaran;
-	color: rgba(245,245,245,0.96);
+	color: rgba(0,0,0,0.96);
 	font-size: 80px;
+	background-color: #fafafa;
 }
 
 #home-bg h4 {
 	font-family: Quicksand;
 	color: rgba(245,245,245,0.9);
+	background-color: black;
+    padding: 10px;
 }
 
 #home-bg button {
@@ -57,7 +60,7 @@ body, html {
 }
 
 #home-bg button:hover {
-	background-color: #fafafa;
+	background-color: #429044;
 	cursor: pointer;
 }
 
@@ -66,7 +69,17 @@ body, html {
 	font-family: Quicksand;
 	text-align: center;
 	position: relative;
+	background-color: black;
 }
+
+#ex_inner h6 {
+	color: lightgrey;
+}
+
+.footer h3 {
+	color: #fafafa;
+}
+
 
 #cb {
 	position: absolute;
@@ -175,6 +188,115 @@ input:focus {
 }
 
 
+.weight-input, .answer-input {
+	width: unset !important;
+	display: inline-block;
+}
+
+.response-holder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.response-holder h1 {
+	margin-top: 35px;
+	font-family: Catamaran;
+}
+
+input {
+	font-family: Quicksand !important;
+}
+
+#example {
+	height: 500px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 50px;
+	background-image: url("../images/bg2.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#example h1 {
+	font-family: Catamaran;
+	color: #fafafa;
+}
+
+nav {
+	transition: background-color 1s;
+}
+
+.solidBrah {
+	background-color: black;
+}
+
+#input-d1 button {
+	display: block;
+	margin: 50px auto;
+	background-color: black;
+	font-family: Catamaran;
+	width: 350px;
+	font-size: 22px;
+	height: 80px;
+	border: transparent;
+}
+
+#input-d1 button:hover {
+	background-color: #429044;
+}
+
+#hidden {
+	display: none;
+}
+
+.weight-input {
+	width: 205px !important;
+}
+
+#output-d1 {
+	margin-top: 100px;
+	padding: 25px;
+}
+
+#output-d1 h1 {
+	font-family: Catamaran;
+    background-color: black;
+    color: #fafafa;
+    padding: 15px;
+}
+
+#output-d1 h3 {
+	margin: 15px 0 15px 15px;
+	font-family: Catamaran;
+}
+
+#last_op {
+	margin-bottom: 35px;
+}
+
+#output-d1 p {
+	margin-left: 50px;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+#output-d1 span {
+	font-weight: normal !important;
+	font-family: Quicksand;
+	font-size: 17px;
+}
+
+#startapp {
+	cursor: pointer;
+	transition: background-color 1s, color 500ms;
+}
+
+#startapp:hover {
+	background-color: #429044;
+	color: #fafafa;
+}
 
 
 
@@ -184,28 +306,10 @@ input:focus {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.input-number-increment,
+.input_number-decrement:hover {
+	background-color: #429044;
+}
 
 .input-number {
   width: 80px;
@@ -248,4 +352,32 @@ input:focus {
 .input-number-increment {
   border-left: none;
   border-radius: 0 4px 4px 0;
+}
+
+#example {
+	transition: height 1s;
+}
+
+
+@media screen and (max-width: 951px) {
+	#example {
+		height: 520px;
+	}
+	.top-q {
+		margin-bottom: 25px;
+	}
+}
+
+@media screen and (max-width: 567px) {
+	#home-bg h1 {
+		font-size: 50px;
+	}
+	#home-bg h4 {
+		font-size: 21px;
+	}
+	#home-bg {
+		height: unset !important;
+		padding-top: 120px;
+    	padding-bottom: 50px;
+	}
 }

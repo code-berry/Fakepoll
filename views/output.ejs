@@ -1,0 +1,80 @@
+<%- include('partials/header') %>
+
+<% const output = Object.values(uInput) %>
+<% let count = 0 %>
+<% god = parseInt(god) %>
+<% let weights = [] %>
+<% let weightsArr = [] %>
+<% let quesArr = [] %>
+<% let _que,_a1,_a2,_a3,_a4 %>
+
+<%for (let i=0;i<output.length;i++) { 
+	switch (count) { 
+		case 0:
+		case 1:
+			_que = output[i]
+			count++
+			break
+		case 2:
+			_a1 = output[i]
+			count++
+			break
+		case 3: 
+			_a2 = output[i]
+			count++
+			break
+		case 4: 
+			_a3 = output[i]
+			count++
+			break
+		case 5:
+			_a4 = output[i]
+			count++
+			break
+		case 6:
+			let weight1 = output[i]
+			weights.push(weight1)
+			count++
+			break
+		case 7:
+			let weight2 = output[i]
+			weights.push(weight2)
+			count++
+			break
+		case 8:
+			let weight3 = output[i]
+			weights.push(weight3)
+			count++
+			break
+		case 9:
+			let weight4 = output[i]
+			weights.push(weight4)
+			weightsArr.push(weights)
+			quesArr.push([_que, _a1, _a2, _a3, _a4])
+			weights = []
+			count = 1
+			break
+	}
+} %>
+
+<div class="container" id="output-d1">
+	<% count = 0 %>
+	<% let x = 1%>
+	<% weightsArr.forEach((elem) => { %>
+		<h1>Question <%= x %></h1>
+		<h3><%= quesArr[count][0] %></h3>
+		<p><%= quesArr[count][1] %>: <span id="ansA<%= count %>"><%= (Math.round(parseFloat(elem[0])*god)) %> responses. (<%= parseFloat(elem[0])*100 %>%)</span></p>
+		<p><%= quesArr[count][2] %>: <span id="ansB<%= count %>"><%= (Math.round(parseFloat(elem[1])*god)) %> responses. (<%= parseFloat(elem[1])*100 %>%)</span></p>
+		<p><%= quesArr[count][3] %>: <span id="ansC<%= count %>"><%= (Math.round(parseFloat(elem[2])*god)) %> responses. (<%= parseFloat(elem[2])*100 %>%)</span></p>
+		<p id="last_op"><%= quesArr[count][4] %>: <span id="ansD<%= count %>"><%= (Math.round(parseFloat(elem[3])*god)) %> responses. (<%= parseFloat(elem[3])*100 %>%)</span></p>
+		<% count++ %>
+		<% x++ %>
+	<% }) %>
+</div>
+ 
+
+
+
+
+<script src="js/output.js"></script>
+<%- include('partials/footer') %>

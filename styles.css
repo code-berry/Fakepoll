@@ -13,7 +13,7 @@ body, html {
 
 #home-bg {
 	height: 800px;
-	background-image: url('images/bg1.jpg');
+	background-image: url('../images/bg1.jpg');
 	background-size: cover;
 	background-position: center;
 	display: flex;
