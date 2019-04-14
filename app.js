@@ -28,6 +28,10 @@ app.get('/main', (req, res) => {
 	res.render('main.ejs');
 });
 
+app.get('/features', (req,res) => {
+	res.render('features.ejs');
+});
+
 app.post('/main', (req, res) => {
 	const responses = req.body.numResponses;
 	const questions = req.body.numQuestions;

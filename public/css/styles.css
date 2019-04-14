@@ -298,10 +298,42 @@ nav {
 	color: #fafafa;
 }
 
+#features-d1 {
+	height: 800px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('../images/bg3.jpg');
+}
 
+.container-slim {
+	padding: 25%;
+}
 
+#features-d1>div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+}
 
+#features-d1 h1 {
+	font-family: Catamaran;
+	font-size: 60px;
+	display: inline-block;
+	padding: 25px;
+	background-color: #fafafa;
+	margin-bottom: 25px;
+}
 
+#features-d1 p {
+	font-family: Quicksand;
+	padding: 20px 50px;
+	background-color: black;
+	line-height: 2;
+	color: #fafafa;
+}
 
 
 
