@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+
+<div class="container-fluid" id="features-d1">
+	<div class="container-slim">
+		<h1>Features</h1>
+		<p>This site was built after a handful of annoying business projects where the professor required we conduct online surveys for ficticious business and marketing plans. I honestly don't think any of my friends wanted to sit through 25 random questions on Google Surveys or Surveymonkey, so I developed this quick JavaScript application that can spit out the answers you need. I plan on implementing some sort of CSV or Excel download, but I just haven't had the time to figure that out yet. If you're checking this out and have any questions or are interested in the project, it's publicly available on <a href="https://www.github.com/code-berry/fakepoll">Github</a>, or you can email me <a href="mailto:matt@codeberry.ca">here</a>. Thanks for stopping by regardless!</p>
+	</div>
+</div>
+
+<script>
+	$(document).ready(()=> {
+		$('nav').addClass('solidBrah');
+		$('#feat-nav').addClass('active');
+	});
+</script>
+
+<%- include('partials/footer') %>
