@@ -310,6 +310,10 @@ nav {
 	padding: 25%;
 }
 
+.nav-link {
+	text-align: right;
+}
+
 #features-d1>div {
 	display: flex;
 	align-items: center;
